@@ -1,0 +1,45 @@
+//tbilisi time
+let tbilisiElement = document.querySelector("#tbilisi");
+let tbilisiDateElement = tbilisiElement.querySelector(".date");
+let tbilisiTimeElement = tbilisiElement.querySelector(".time");
+let tbilisiTime = moment().tz("Asia/Tbilisi");
+
+tbilisiDateElement.innerHTML = tbilisiTime.format("MMMM Do YYYY");
+tbilisiTimeElement.innerHTML = `${tbilisiTime.format(
+  "h:mm:ss [<small>]A[</small>]"
+)}`;
+
+//warsaw time
+let warsawElement = document.querySelector("#warsaw");
+let warsawDateElement = warsawElement.querySelector(".date");
+let warsawTimeElement = warsawElement.querySelector(".time");
+let warsawTime = moment().tz("Europe/Warsaw");
+
+warsawDateElement.innerHTML = warsawTime.format("MMMM Do YYYY");
+warsawTimeElement.innerHTML = `${warsawTime.format(
+  "h:mm:ss [<small>]A[</small>]"
+)}`;
+
+//stockholm time
+
+let stockholmElement = document.querySelector("#stockholm");
+let stockholmDateElement = stockholmElement.querySelector(".date");
+let stockholmTimeElement = stockholmElement.querySelector(".time");
+let stockholmTime = moment().tz("Europe/Stockholm");
+
+stockholmDateElement.innerHTML = stockholmTime.format("MMMM Do YYYY");
+stockholmTimeElement.innerHTML = `${stockholmTime.format(
+  "h:mm:ss [<small>]A[</small>]"
+)}`;
+
+//reykjavik time
+
+let reykjavikElement = document.querySelector("#reykjavik");
+let reykjavikDateElement = reykjavikElement.querySelector(".date");
+let reykjavikTimeElement = reykjavikElement.querySelector(".time");
+let reykjavikTime = moment().tz("Atlantic/Reykjavik");
+
+reykjavikDateElement.innerHTML = reykjavikTime.format("MMMM Do YYYY");
+reykjavikTimeElement.innerHTML = `${reykjavikTime.format(
+  "h:mm:ss [<small>]A[</small>]"
+)}`;
