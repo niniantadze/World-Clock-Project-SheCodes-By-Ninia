@@ -49,3 +49,26 @@ setInterval(function () {
     "h:mm:ss [<small>]A[</small>]"
   )}`;
 }, 1000);
+
+//choosing city
+
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityTime = moment().tz(cityTimeZone);
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+  let fourCitiesElement = document.querySelector("#fourCities");
+  fourCitiesElement.innerHTML = `<div class="city">
+      <div>
+        <h2>${cityName}</h2>
+        <div class="date">${cityTime.format("MMMM Do YYYY")};
+        </div>
+      </div>
+      <div class="time">
+        ${cityTime.format("h:mm:ss [<small>]A[</small>]")}
+      </div>
+    </div>
+  `;
+}
+
+let citySelectElement = document.querySelector("#oneCity");
+citySelectElement.addEventListener("change", updateCity);
