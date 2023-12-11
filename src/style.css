@@ -71,11 +71,4 @@ a:hover {
   color: rgba(25, 67, 130, 0.8);
   font-size: 26px;
 }
-#homeButton {
-  text-decoration: none;
-  transition: all 200ms ease-in-out;
-}
-#homeButton:hover {
-  font-size: large;
-  font-weight: bolder;
-}
+
